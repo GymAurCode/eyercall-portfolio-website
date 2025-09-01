@@ -536,7 +536,7 @@ function MyBook() {
     />
 
     {/* CEO Name */}
-    <h2 className="mt-4 text-2xl font-bold text-gray-800">Muhammad Ali</h2>
+    <h2 className="mt-4 text-2xl font-bold text-gray-800">Muhammad Asad</h2>
 
     {/* CEO Title */}
     <p className="text-sm text-gray-500">Chief Executive Officer - Eyercall</p>
