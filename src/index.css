@@ -1,0 +1,97 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* CSS Variables for themes */
+:root {
+  /* Light theme variables */
+  --bg-primary: #ffffff;
+  --bg-secondary: #f8fafc;
+  --text-primary: #1e293b;
+  --text-secondary: #475569;
+  --accent: #7c3aed;
+  --border: #e2e8f0;
+  --card-bg: #ffffff;
+  --input-bg: #f1f5f9;
+  --input-border: #cbd5e1;
+}
+
+.dark {
+  /* Dark theme variables */
+  --bg-primary: #000000;
+  --bg-secondary: #0f172a;
+  --text-primary: #f8fafc;
+  --text-secondary: #cbd5e1;
+  --accent: #a855f7;
+  --border: #334155;
+  --card-bg: #1e293b;
+  --input-bg: #334155;
+  --input-border: #475569;
+}
+
+/* Base styles */
+html{
+  overflow-x: hidden;
+}
+body {
+  overflow-x: hidden;
+  font-family: Arial, Helvetica, sans-serif;
+  margin: 0;
+  padding: 0;
+  position: relative;
+  background-color: var(--bg-primary);
+  color: var(--text-primary);
+  transition: background-color 0.3s ease, color 0.3s ease;
+  z-index: 999;
+  /* cursor: none; */
+}
+
+/* Theme transition classes */
+.theme-transition {
+  transition: background-color 0.3s ease, color 0.3s ease, border-color 0.3s ease;
+}
+
+/* Light theme specific overrides */
+.light {
+  background-color: var(--bg-primary);
+  color: var(--text-primary);
+}
+
+/* Dark theme specific overrides */
+.dark {
+  background-color: var(--bg-primary);
+  color: var(--text-primary);
+}
+
+.demopage {
+  width: 100%;
+  height: 100%;
+  /* background-color: #fef3c7; */
+  color: black;
+  border-radius: 16px;
+  border: 1px solid black ;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+/* Custom Purple Scrollbar */
+::-webkit-scrollbar {
+  width: 5px; /* width of scrollbar */
+}
+
+::-webkit-scrollbar-track {
+  background: #000000; /* light purple track */
+  border-radius: 9999px;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #9333ea; /* purple thumb */
+  border-radius: 9999px;
+  transition: background 0.3s ease;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #7e22ce; /* darker purple on hover */
+}
