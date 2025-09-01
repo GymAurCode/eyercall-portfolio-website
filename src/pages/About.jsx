@@ -368,7 +368,7 @@ function MyBook() {
   const poresDataUrl = `url("data:image/svg+xml;utf8,${encodeURIComponent(poresSVG)}")`;
 
   return (
-    <div className=" bg-gradient-to-b from-gray-200 to-gray-100 dark:bg-gradient-to-tr dark:from-gray-900 dark:to-purple-700 text-gray-800 dark:text-white py-12 px-6 flex items-center justify-center z-50  theme-transition pt-[120px] pb-[700px]">
+    <div className=" bg-gradient-to-b from-gray-200 to-gray-100 dark:bg-gradient-to-tr dark:from-gray-900 dark:to-purple-700 text-gray-800 dark:text-white py-12 px-6 flex items-center justify-center z-50  theme-transition pt-[120px] pb-[150px]">
       <HTMLFlipBook
         width={370}
         height={500}
@@ -530,7 +530,7 @@ function MyBook() {
 
     {/* CEO Image */}
     <img
-      src="/images/ceo.jpg"
+      src="/images/ceo.png"
       alt="CEO Eyercall"
       className="w-28 h-28 rounded-full object-cover border-4 border-white shadow-lg relative z-10 mt-10"
     />
@@ -689,7 +689,7 @@ function MyBook() {
   {/* Profile Image */}
   <div className="w-36 h-36 rounded-full overflow-hidden border-4 border-indigo-500 shadow-lg mb-4  ml-[86px]">
     <img 
-      src="./images/Umer.png" 
+      src="/images/Umer.png" 
       alt="Team Member" 
       className=" bg-gray-300 w-full h-40 object-center "
     />
@@ -799,8 +799,8 @@ function MyBook() {
   {/* Profile Image */}
   <div className="w-36 h-36 rounded-full overflow-hidden border-4 border-indigo-500 shadow-lg mb-4 ml-[86px]">
     <img 
-      src="./images/waleed.jpg" 
-      alt="Team Member" 
+      src="/images/waleed.jpg" 
+      alt="Team-ready" 
       className="w-full h-full object-cover"
     />
   </div>

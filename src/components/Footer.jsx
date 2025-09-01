@@ -4,7 +4,7 @@ function Footer() {
   return (
     <>
       {/* ✅ Background Footer */}
-      <footer className="relative w-full h-[650px] bg-gray-100 z-10 dark:bg-black flex flex-col justify-center items-center overflow-hidden theme-transition">
+      <footer className="w-full h-[650px] bg-gray-100 dark:bg-black flex flex-col justify-center items-center overflow-hidden theme-transition">
         
         {/* ✅ Main Animated Heading */}
         <h1
@@ -52,7 +52,8 @@ function Footer() {
 </div>
       </footer>
 
-
+      {/* ✅ Extra space so footer fully visible when scrolled to end */}
+      <div className="pb-20"></div>
     </>
   );
 }

@@ -55,16 +55,7 @@ function HeroSection() {
         </motion.p>
       </div>
 
-      {/* Right Section - Rotating 3D Image
-      <div className="flex justify-center items-center z-40">
-        <img
-          ref={imgRef}
-          src="./images/3dtool.webp"
-          alt="3D Tool"
-          className="w-[350px] md:w-[450px] lg:w-[500px] drop-shadow-2xl"
-        />
-      </div> */}
-
+      {/* Right Section - Rotating 3D Image */}
       <LottieAnimation />
     </section>
   );

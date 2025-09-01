@@ -16,7 +16,7 @@ export default function App() {
         <ScrollToTop />
         <CustomCursor />
           <Header />
-          <main className="theme-transition min-h-screen">
+          <main className="theme-transition">
             <Routes>
               <Route path="/" element={<Home />} />
               <Route path="/about" element={<About />} />

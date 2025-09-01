@@ -13,7 +13,7 @@ function CeoCard() {
           data-aos-delay="100"
         >
           <img
-            src="./images/ceo.png" // <-- apni CEO image ka path yahan dalna
+            src="/images/ceo.png"
             alt="CEO"
             className="w-44 h-44 md:w-52 md:h-52 rounded-full border-4 border-purple-400 shadow-lg mb-6 object-cover bg-purple-500 "
           />
