@@ -11,7 +11,7 @@ const Page = React.forwardRef((props, ref) => {
   return (
     <div
       ref={ref}
-      className={`w-full h-full flex items-center justify-center text-center font-semibold text-lg shadow-md  ${
+      className={`w-full h-full flex items-center  justify-center text-center font-semibold text-lg shadow-md  ${
         props.className || ""
       }`}
       style={{
@@ -254,7 +254,7 @@ const ContactModal = ({ isOpen, onClose, memberName, memberEmail }) => {
   if (!isOpen) return null;
 
   return (
-    <div className="absolute inset-0 bg-black bg-opacity-50 flex items-center justify-center z-30 p-4">
+    <div className="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center z-50 p-4">
       <div className="bg-white rounded-xl shadow-2xl max-w-md w-full p-6">
         {/* Header */}
         <div className="flex justify-between items-center mb-6">
@@ -368,7 +368,7 @@ function MyBook() {
   const poresDataUrl = `url("data:image/svg+xml;utf8,${encodeURIComponent(poresSVG)}")`;
 
   return (
-    <div className=" bg-gradient-to-b from-gray-200 to-gray-100 dark:bg-gradient-to-tr dark:from-gray-900 dark:to-purple-700 text-gray-800 dark:text-white py-12 px-6 flex items-center justify-center z-30  theme-transition pt-[120px] pb-[150px]">
+    <div className=" bg-gradient-to-b from-gray-200 to-gray-100 dark:bg-gradient-to-tr dark:from-gray-900 dark:to-purple-700 text-gray-800 dark:text-white py-12 px-6 flex items-center justify-center z-50  theme-transition pt-[120px] pb-[700px]">
       <HTMLFlipBook
         width={370}
         height={500}

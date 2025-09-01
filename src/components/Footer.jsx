@@ -4,13 +4,14 @@ function Footer() {
   return (
     <>
       {/* ✅ Background Footer */}
-      <footer className="fixed bottom-0 left-0 w-full h-[650px] bg-gray-100 dark:bg-black flex flex-col justify-center items-center -z-10 overflow-hidden theme-transition">
+      <footer className="relative w-full h-[650px] bg-gray-100 z-10 dark:bg-black flex flex-col justify-center items-center overflow-hidden theme-transition">
         
         {/* ✅ Main Animated Heading */}
         <h1
           data-aos="zoom-in"
           data-aos-delay="200"
           className="
+
   font-bold font-bebas tracking-widest 
   text-[clamp(4rem,15vw,18rem)] text-center 
   drop-shadow-lg z-20 
@@ -22,7 +23,7 @@ function Footer() {
         </h1>
 
         {/* ✅ Social Links */}
-        <div className="z-40 absolute bottom-10 flex flex-wrap gap-8 text-gray-700 dark:text-purple-200 text-3xl md:text-4xl 
+        <div className=" absolute bottom-10 flex flex-wrap gap-8 text-gray-700 dark:text-purple-200 text-3xl md:text-4xl 
                  justify-center px-6">
   <a href="https://github.com" target="_blank" rel="noopener noreferrer"
      className="hover:text-black hover:bg-white hover:rounded-full hover:scale-125 transition-all duration-300 cursor-pointer transform hover:rotate-12">
@@ -51,8 +52,7 @@ function Footer() {
 </div>
       </footer>
 
-      {/* ✅ Extra space so footer fully visible when scrolled to end */}
-      <div className="pb-[100vh]"></div>
+
     </>
   );
 }
