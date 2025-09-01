@@ -55,7 +55,6 @@ function HeroSection() {
         </motion.p>
       </div>
 
-      {/* Right Section - Rotating 3D Image */}
       <LottieAnimation />
     </section>
   );
