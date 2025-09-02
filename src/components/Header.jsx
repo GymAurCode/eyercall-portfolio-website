@@ -151,7 +151,7 @@ const Header = () => {
 
        {/* Social icons - Desktop */}
 
-           <div className="md:flex items-center space-x-4 hidden">
+           <div className="md:flex items-center space-x-4 hidden pr-10 ml-auto ">
                
                <motion.a
                className="text-gray-700 dark:text-gray-300 hover:text-violet-600 dark:hover:text-violet-400 transition-colors duration-300" 
