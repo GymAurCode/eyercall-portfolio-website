@@ -450,8 +450,8 @@ function MyBook() {
 
           {/* Foreground content (title) */}
           <div className="relative z-10 flex flex-col justify-center items-center h-full">
-            <h1 className="font-bold mt-[10px] text-4xl text-amber-100 drop-shadow-md">Eyercall</h1>
-            <p className="w-[280px] text-sm text-amber-100 mt-[280px] text-center">"Small steps, great journeys—together we build the future."</p>
+            <h1 className="font-bold mt-[10px] text-2xl md:text-4xl text-amber-100 drop-shadow-md">Eyercall</h1>
+            <p className="w-[240px] md:w-[280px] text-xs md:text-sm text-amber-100 mt-[200px] md:mt-[280px] text-center">"Small steps, great journeys—together we build the future."</p>
           </div>
         </div>
 
@@ -486,8 +486,8 @@ function MyBook() {
 
 
 
-       {/* page 2 */}
-<div className="flex flex-col items-center justify-center text-center p-6 pt-12 bg-amber-50  h-[500px] rounded-xl shadow-md">
+               {/* page 2 */}
+<div className="flex flex-col items-center justify-center text-center p-4 md:p-6 pt-8 md:pt-12 bg-amber-50 h-[400px] md:h-[500px] rounded-xl shadow-md">
   {/* Page Title */}
   <h2 className="text-3xl font-bold text-gray-900 mb-4">
     What <span className="text-indigo-600">Eyercall</span> Offers
@@ -523,7 +523,7 @@ function MyBook() {
 
 
 <div className="demopage bg-amber-50 flex items-center justify-center ">
-  <div className="h-[500px] w-[370px] bg-amber-50 backdrop-blur-md rounded-2xl shadow-2xl border border-gray-200 p-6 flex flex-col items-center text-center relative">
+  <div className="h-[500px] md:h-[500px] w-[370px] md:w-[370px] bg-amber-50 backdrop-blur-md rounded-2xl shadow-2xl border border-gray-200 p-4 md:p-6 flex flex-col items-center text-center relative">
     
     {/* Decorative Gradient Circle Background */}
     <div className="absolute top-0 left-0 w-full h-1/3 rounded-t-2xl"></div>
@@ -581,12 +581,12 @@ function MyBook() {
 
 
 
-       {/* Page 3 - Team Member */}
+                {/* Page 3 - Team Member */}
 <div className="demopage flex flex-col items-center justify-center text-center p-6 bg-amber-50 h-[500px] rounded-xl shadow-md">
   {/* Profile Image */}
   <div className="w-36 h-36 rounded-full overflow-hidden border-4 border-indigo-500 shadow-lg mb-4 ml-[87px] ">
     <img 
-      src="/path-to-member-image.jpg" 
+      src="/images/hussnain.jpg" 
       alt="Team Member" 
       className="w-full h-full object-cover"
     />
@@ -687,7 +687,7 @@ function MyBook() {
          {/* Page 3 - Team Member */}
 <div className="demopage flex flex-col items-center justify-center text-center p-6 bg-amber-50 h-[500px] rounded-xl shadow-md">
   {/* Profile Image */}
-  <div className="w-36 h-36 rounded-full overflow-hidden border-4 border-indigo-500 shadow-lg mb-4  ml-[86px]">
+  <div className="w-36 h-36 rounded-full overflow-hidden border-4 border-indigo-500 shadow-lg mb-4 ml-[86px]">
     <img 
       src="/images/Umer.png" 
       alt="Team Member" 
@@ -849,7 +849,7 @@ function MyBook() {
 
         
         
-        {/* page 6 */}
+                 {/* page 6 */}
 <div className="demopage flex flex-col items-center justify-center bg-amber-50">
   <div className="flex flex-col items-center justify-start w-[370px] h-[500px] bg-amber-50 shadow-lg rounded-xl p-6">
     
@@ -898,7 +898,7 @@ function MyBook() {
 
 
 
-     <div className="demopage w-[370px] h-[500px] flex flex-col items-center justify-center text-center rounded-2xl  bg-amber-50 p-6">
+           <div className="demopage w-[370px] h-[500px] flex flex-col items-center justify-center text-center rounded-2xl  bg-amber-50 p-6">
       {/* Title */}
       <h2 className="text-2xl font-bold text-amber-900 mb-4">Thank You!</h2>
 
@@ -927,7 +927,7 @@ function MyBook() {
 
 
   
- <div className="demopage flex flex-col items-center justify-center bg-amber-50">
+   <div className="demopage flex flex-col items-center justify-center bg-amber-50">
   <div className="flex flex-col items-center justify-center w-[370px] h-[500px] bg-amber-50 shadow-lg rounded-xl p-6">
     
     {/* Title */}
