@@ -98,3 +98,23 @@ html {
 ::-webkit-scrollbar-thumb:hover {
   background: #7e22ce; /* darker purple on hover */
 }
+
+/* Animation styles for eyercall text */
+#animation .text-xl {
+  font-size: 1.5rem;
+  color: currentColor;
+  letter-spacing: 0.06em;
+}
+
+.animated-text {
+  display: inline-block;
+  overflow: visible;
+}
+
+.animated-text span {
+  display: inline-block;
+  transform: translateY(0);
+  will-change: transform;
+}
+
+

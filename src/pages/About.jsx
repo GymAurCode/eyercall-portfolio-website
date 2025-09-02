@@ -368,7 +368,7 @@ function MyBook() {
   const poresDataUrl = `url("data:image/svg+xml;utf8,${encodeURIComponent(poresSVG)}")`;
 
   return (
-    <div className=" bg-gradient-to-b from-gray-200 to-gray-100 dark:bg-gradient-to-tr dark:from-gray-900 dark:to-purple-700 text-gray-800 dark:text-white py-12 px-6 flex items-center justify-center z-50  theme-transition pt-[120px] pb-[150px]">
+    <div className=" bg-gradient-to-b from-gray-200 to-gray-100 dark:bg-gradient-to-tr dark:from-gray-900 dark:to-purple-700 text-gray-800 dark:text-white py-12 px-6 flex items-center justify-center z-50  theme-transition pt-[120px] pb-[250px]">
       <HTMLFlipBook
         width={370}
         height={500}
@@ -639,7 +639,7 @@ function MyBook() {
 <div className=" demopage flex flex-col items-center justify-center p-6 bg-amber-50 h-[500px] rounded-xl shadow-md border-s-black border-solid">
   
   {/* Title */}
-  <h2 className="text-xl font-bold text-gray-900 mb-4">Ahmed Khan - <span className="text-indigo-600">Skills & Expertise</span></h2>
+  <h2 className="text-xl font-bold text-gray-900 mb-4">Muhammad Hussnain - <span className="text-indigo-600">Skills & Expertise</span></h2>
 
   {/* Skills Grid */}
   <div className="grid grid-cols-2 sm:grid-cols-2 gap-5 text-center mt-10">
@@ -696,7 +696,7 @@ function MyBook() {
   </div>
 
   {/* Name */}
-  <h2 className="text-2xl font-bold text-gray-900">Umer Mughal</h2>
+  <h2 className="text-2xl font-bold text-gray-900">Muhammad Umer</h2>
 
   {/* Role */}
   <p className="text-indigo-600 font-semibold mt-1">Full stack developer</p>

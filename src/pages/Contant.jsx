@@ -7,7 +7,7 @@ import { emailjsConfig, teamMembers as emailTeamMembers } from "../config/emailj
 
 const teamMembers = [
   {
-    name: "CEO",
+    name: "Muhammad Asad",
     role: "Chief Executive Officer",
     email: "ceo.eyercall@gmail.com",
     phone: "+92-300-1234567",
@@ -17,10 +17,10 @@ const teamMembers = [
   },
   {
     name: "Muhammad Hussnain",
-    role: "Cybersecurity Specialist",
+    role: "Chief Technology Officer",
     email: "Hussnain@gmail.com",
     phone: "+92-300-7654321",
-    image: "./images/eyercall.png",
+    image: "./images/hussnain.png",
     socials: { linkedin: "#", instagram: "#", github: "#" },
     description: "Ensuring security and reliability of our platform"
   }

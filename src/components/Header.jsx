@@ -105,16 +105,16 @@ const Header = () => {
         >
           <Link to="/" className="flex items-center">
             <div className="h-10 w-10 rounded-xl bg-gradient-to-r  flex items-center justify-center text-purple-600 font-bold text-xl mr-3 ">
-              <img src="./images/eyercall.png" alt="Eyercall Logo" />
+              <img  src="/images/eyercall-gif.gif" alt="" />
             </div>
-            <span className="text-xl font-bold bg-gradient-to-r from-gray-800 to-gray-600 dark:from-gray-300 dark:to-gray-100 bg-clip-text text-transparent">
-              Eyercall
-            </span>
+        <span className="jump-glitch text-[25px] font-bold bg-gradient-to-r from-gray-800 to-gray-600 dark:from-gray-300 dark:to-gray-500 bg-clip-text text-transparent">
+  Eyercall
+</span>
           </Link>
         </motion.div>
 
         {/* Desktop Navigation */}
-       <nav className="ml-[180px] lg:flex hidden space-x-8">
+       <nav className="ml-[400px] lg:flex hidden space-x-8">
   {[
     { name: "Home", path: "/" },
     { name: "About", path: "/about" },
@@ -140,7 +140,7 @@ const Header = () => {
           }`}
         >
           {item.name}
-          <span className={`absolute -bottom-[6px] left-1/2 h-0.5 bg-gradient-to-r from-pink-600 via-purple-400 to-blue-500 group-hover:w-[120%] transition-all duration-300 transform -translate-x-1/2 ${
+          <span className={`absolute -bottom-[6px] left-1/2 h-0.5 dark:bg-gradient-to-r dark:from-gray-600 dark:to-gray-400 group-hover:w-[120%] transition-all duration-300 transform -translate-x-1/2 ${
             location.pathname === item.path ? 'w-[120%]' : 'w-0'
           }`}></span>
         </Link>
@@ -151,7 +151,7 @@ const Header = () => {
 
        {/* Social icons - Desktop */}
 
-           <div className="md:flex items-center space-x-4 hidden pr-10 ml-auto ">
+           <div className="md:flex items-center space-x-4 hidden mr-[10px] m-auto">
                
                <motion.a
                className="text-gray-700 dark:text-gray-300 hover:text-violet-600 dark:hover:text-violet-400 transition-colors duration-300" 
@@ -244,7 +244,7 @@ const Header = () => {
         opacity: isOpen ? 1 : 0,
         height: isOpen ? "auto" : 0,
      }}
-     className="md:hidden overflow-hidden bg-gray-100 dark:bg-gray-900 shadow-lg px-4 py-5 space-y-5 theme-transition">
+     className="md:hidden overflow-hidden  bg-gray-100 dark:bg-gray-900 shadow-lg px-4 py-5 space-y-5 theme-transition">
           <nav className="flex flex-col space-y-3">
               {[
                 { name: "Home", path: "/" },
