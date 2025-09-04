@@ -14,9 +14,6 @@ export default {
       screens: {
         'xl2': '1500px', // custom breakpoint
       },
-      animation: {
-    'spin-slow': 'spin 4s linear infinite',
-  },
     },
   },
   plugins: [],

@@ -12,22 +12,11 @@ function CeoCard() {
           data-aos="fade-right"
           data-aos-delay="100"
         >
-         <div className="relative w-44 h-44 md:w-52 md:h-52">
-  {/* Rotating Loader Border */}
-  <div className="absolute inset-0 rounded-full p-[4px] animate-spin-slow 
-                  bg-[conic-gradient(from_0deg,transparent_75%,#a855f7_100%)]">
-  </div>
-
-  {/* Image inside */}
-  <div className="absolute inset-[6px] rounded-full bg-white">
-    <img
-      src="/images/ceo.png"
-      alt="CEO"
-      className="w-full h-full rounded-full object-cover"
-    />
-  </div>
-</div>
-
+          <img
+            src="/images/ceo.png"
+            alt="CEO"
+            className="w-44 h-44 md:w-52 md:h-52 rounded-full border-4 border-purple-400 shadow-lg mb-6 object-cover bg-purple-500 "
+          />
           <h2 className="text-3xl font-bold mb-2">M. Asad Shaukat</h2>
           <p className="text-purple-300 mb-6">CEO, Eyercall</p>
           
