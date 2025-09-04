@@ -203,17 +203,17 @@ export default function Contact() {
   };
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-purple-950 to-black flex flex-col items-center justify-center z-30 relative px-4 py-16">
+    <div className="min-h-screen bg-gradient-to-tr from-purple-300 to-gray-100 dark:from-purple-950 dark:to-black flex flex-col items-center justify-center z-30 relative px-4 py-16">
       
       {/* Main Big Box with only Contact Form - Reduced Height */}
       <motion.div
         initial={{ opacity: 0, y: 50 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.8 }}
-        className="w-full max-w-5xl backdrop-blur-lg bg-white/10 border border-white/20 rounded-3xl p-6 mb-16 text-white mt-[50px]"
+        className="w-full max-w-5xl backdrop-blur-lg bg-violet-300 dark:bg-white/10  border-gray-600 dark:border-white/20 rounded-3xl p-6 mb-16 dark:text-white mt-[50px]"
       >
-        <h1 className="text-4xl font-bold mb-3">Contact Us & Queries</h1>
-        <p className="text-lg text-gray-300 mb-5">
+        <h1 className="text-4xl  bg-gradient-to-r from-purple-700 via-blue-500 to-pink-600 bg-clip-text text-transparent dark:text-white font-bold mb-3">Contact Us & Queries</h1>
+        <p className="text-lg text-white/80 dark:text-gray-300 mb-5">
           If you want to create, build, or collaborate on any project, we are here to help you. 
           Reach out with your ideas or inquiries, and let's make something amazing together.
         </p>
@@ -223,17 +223,17 @@ export default function Contact() {
           <input
             type="text"
             placeholder="Your Name"
-            className="w-full px-3 py-2 rounded-lg bg-white/10 border border-white/20 text-white placeholder-gray-400 focus:outline-none focus:border-purple-400"
+            className="w-full px-3 py-2 rounded-lg bg-white/60 dark:bg-white/10 border border-white/20 text-black/70 dark:text-white placeholder-gray-400 focus:outline-none focus:border-purple-400"
           />
           <input
             type="email"
             placeholder="Your Email"
-            className="w-full px-3 py-2 rounded-lg bg-white/10 border border-white/20 text-white placeholder-gray-400 focus:outline-none focus:border-purple-400"
+            className="w-full px-3 py-2 rounded-lg bg-white/60 dark:bg-white/10 border border-white/20 text-black/70 dark:text-white placeholder-gray-400 focus:outline-none focus:border-purple-400"
           />
           <textarea
             rows={3}
             placeholder="Your Message"
-            className="w-full px-3 py-2 rounded-lg bg-white/10 border border-white/20 text-white placeholder-gray-400 focus:outline-none focus:border-purple-400"
+            className="w-full px-3 py-2 rounded-lg bg-white/60 dark:bg-white/10 border border-white/20 text-black/70 dark:text-white placeholder-gray-400 focus:outline-none focus:border-purple-400"
           ></textarea>
           <button
             type="submit"
@@ -245,7 +245,7 @@ export default function Contact() {
       </motion.div>
 
       {/* Section Heading */}
-      <h2 className="text-5xl mt-[50px] font-semibold text-white mb-10">Get in Touch with Our Experts</h2>
+      <h2 className="text-5xl mt-[50px] font-semibold bg-gradient-to-r from-purple-700 via-blue-500 to-pink-600 dark:text-white bg-clip-text text-transparent mb-10">Get in Touch with Our Experts</h2>
 
       {/* Team Member Boxes - Beautiful Cards */} 
       <div className="grid grid-cols-1 md:grid-cols-2 gap-10 w-full max-w-6xl pb-[200px]">
@@ -255,7 +255,7 @@ export default function Contact() {
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 0.2 * idx }}
-            className="backdrop-blur-lg bg-white/10 border border-white/20 rounded-3xl p-8 hover:bg-purple-800/30 transition-all duration-300 hover:scale-105 group"
+            className="backdrop-blur-lg bg-violet-300 dark:bg-white/10 border border-white/20 rounded-3xl p-8 hover:bg-purple-800/45 dark:hover:bg-purple-800/30 transition-all duration-300 hover:scale-105 group"
           >
             {/* Profile Section */}
             <div className="flex flex-col items-center text-center mb-8">
@@ -266,27 +266,27 @@ export default function Contact() {
                   className="w-32 h-32 rounded-full border-4 border-purple-500 shadow-2xl group-hover:border-pink-400 transition-all duration-300"
                 />
                 <div className="absolute -bottom-2 -right-2 w-8 h-8 bg-gradient-to-r from-purple-500 to-pink-500 rounded-full flex items-center justify-center">
-                  <span className="text-white text-xs font-bold">👤</span>
+                  <span className="text-gray-900 dark:text-white text-xs font-bold">👤</span>
                 </div>
               </div>
               
-              <h3 className="text-3xl font-bold text-white mb-2 group-hover:text-purple-300 transition-colors">
+              <h3 className="text-3xl font-bold text-gray-900 dark:text-white mb-2 group-hover:text-purple-300 transition-colors">
                 {member.name}
               </h3>
-              <p className="text-purple-300 font-medium mb-3 text-lg">{member.role}</p>
-              <p className="text-gray-300 text-sm leading-relaxed max-w-xs">
+              <p className="text-purple-800 dark:text-purple-300 font-medium mb-3 text-lg">{member.role}</p>
+              <p className="text-gray-700 dark:text-gray-300 text-sm leading-relaxed max-w-xs">
                 {member.description}
               </p>
             </div>
 
             {/* Contact Information */}
             <div className="space-y-4 mb-6">
-              <div className="flex items-center justify-center space-x-3 text-gray-200 hover:text-purple-300 transition-colors">
-                <FaEnvelope className="text-purple-400 text-lg" />
+              <div className="flex items-center justify-center space-x-3 text-gray-700 dark:text-gray-200 hover:text-purple-300 transition-colors">
+                <FaEnvelope className="text-purple-800 dark:text-purple-400 text-lg" />
                 <span className="text-sm">{member.email}</span>
               </div>
-              <div className="flex items-center justify-center space-x-3 text-gray-200 hover:text-purple-300 transition-colors">
-                <FaPhone className="text-purple-400 text-lg" />
+              <div className="flex items-center justify-center space-x-3 text-gray-700 dark:text-gray-200 hover:text-purple-300 transition-colors">
+                <FaPhone className="text-purple-800 dark:text-purple-400 text-lg" />
                 <span className="text-sm">{member.phone}</span>
               </div>
             </div>
@@ -295,7 +295,7 @@ export default function Contact() {
             <div className="flex justify-center gap-6 mb-6">
               <a 
                 href={member.socials.linkedin} 
-                className="text-2xl text-gray-300 hover:text-blue-400 hover:scale-110 transition-all duration-300"
+                className="text-2xl text-white dark:text-gray-300 hover:text-blue-400 hover:scale-110 transition-all duration-300"
                 target="_blank"
                 rel="noopener noreferrer"
               >
@@ -303,7 +303,7 @@ export default function Contact() {
               </a>
               <a 
                 href={member.socials.instagram} 
-                className="text-2xl text-gray-300 hover:text-pink-500 hover:scale-110 transition-all duration-300"
+                className="text-2xl text-white dark:text-gray-300 hover:text-pink-500 hover:scale-110 transition-all duration-300"
                 target="_blank"
                 rel="noopener noreferrer"
               >
@@ -311,7 +311,7 @@ export default function Contact() {
               </a>
               <a 
                 href={member.socials.github} 
-                className="text-2xl text-gray-300 hover:text-gray-100 hover:scale-110 transition-all duration-300"
+                className="text-2xl text-white dark:text-gray-300 hover:text-black/60 hover:scale-110 transition-all duration-300"
                 target="_blank"
                 rel="noopener noreferrer"
               >

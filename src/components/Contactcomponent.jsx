@@ -62,14 +62,14 @@ function ContactSection() {
   };
 
   return (
-    <section className="pt-[200px] pb-[160px] w-full bg-gradient-to-b from-gray-100 to-gray-200 dark:from-black dark:to-purple-900 px-6 py-20 z-30 relative theme-transition">
+    <section className="pt-[200px] pb-[160px] w-full bg-gradient-to-b from-purple-200 to-white dark:from-black dark:to-purple-900 px-6 py-20 z-30 relative theme-transition">
       {/* Heading */}
       <div
         className="max-w-5xl mx-auto text-center mb-10"
         data-aos="fade-up"
         data-aos-delay="100"
       >
-        <h2 className="text-4xl font-bold text-gray-800 dark:text-white mb-3">Get in Touch</h2>
+        <h2 className="text-4xl font-bold bg-gradient-to-r from-purple-700 to-pink-600 bg-clip-text text-transparent dark:text-white mb-3">Get in Touch</h2>
         <p className="text-gray-600 dark:text-gray-300 text-lg">
           Have questions or want to work with us? Fill the form below or reach us directly.
         </p>
@@ -84,21 +84,21 @@ function ContactSection() {
           data-aos="fade-right"
           data-aos-delay="200"
         >
-          <h3 className="text-2xl font-semibold text-gray-800 dark:text-white">Contact Information</h3>
+          <h3 className="text-2xl font-semibold bg-gradient-to-r from-purple-700 to-blue-600 bg-clip-text text-transparent dark:text-white">Contact Information</h3>
           <p className="text-gray-600 dark:text-gray-300">
             We're here to help you with Eyercall services. Reach out via form or use the info below.
           </p>
 
           <div className="flex items-center gap-3 text-gray-600 dark:text-gray-200">
-            <FaEnvelope className="text-purple-400 text-xl" />
+            <FaEnvelope className="text-purple-600 text-xl" />
             <span>ceo.eyercall@gmail.com</span>
           </div>
           <div className="flex items-center gap-3 text-gray-600 dark:text-gray-200">
-            <FaPhoneAlt className="text-purple-400 text-xl" />
+            <FaPhoneAlt className="text-purple-600 text-xl" />
             <span>+92 3064493249</span>
           </div>
           <div className="flex items-center gap-3 text-gray-600 dark:text-gray-200">
-            <FaMapMarkerAlt className="text-purple-400 text-xl" />
+            <FaMapMarkerAlt className="text-purple-600 text-xl" />
             <span>Lahore, Pakistan</span>
           </div>
         </div>
