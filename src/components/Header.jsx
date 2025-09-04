@@ -1,13 +1,16 @@
 import { motion, AnimatePresence , useMotionValue, useTransform  } from "framer-motion";
 import { FiGithub, FiTwitter, FiLinkedin, FiMenu, FiX } from "react-icons/fi"; 
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { Link, useLocation } from "react-router-dom";
 import ThemeToggle from "./ThemeToggle";
 import emailjs from "@emailjs/browser";
 import { emailjsConfig } from "../config/emailjs.js";
+import ThemeImage  from "./ThemeImage.jsx";
 
 const Header = () => {
     const location = useLocation();
+
+      
 
     //Toggle the menu open/close
     const [isOpen, setIsOpen] = useState(false);
@@ -105,9 +108,9 @@ const Header = () => {
         >
           <Link to="/" className="flex items-center">
             <div className="h-10 w-10 rounded-xl bg-gradient-to-r  flex items-center justify-center text-purple-600 font-bold text-xl mr-3 ">
-              <img  src="/images/eyercall-gif.gif" alt="" />
+              <ThemeImage/>
             </div>
-        <span className="jump-glitch text-[25px] font-bold bg-gradient-to-r from-gray-800 to-gray-600 dark:from-gray-300 dark:to-gray-500 bg-clip-text text-transparent">
+        <span className="jump-glitch text-[25px] font-bold bg-gradient-to-r from-purple-700 via-blue-500 to-pink-600 dark:from-gray-300 dark:to-gray-500 bg-clip-text text-transparent">
   Eyercall
 </span>
           </Link>
@@ -135,8 +138,8 @@ const Header = () => {
       >
         <Link
           to={item.path}
-          className={`relative text-gray-700 dark:text-gray-300 hover:text-violet-400 font-medium transition-colors duration-300 group ${
-            location.pathname === item.path ? 'text-violet-400' : ''
+          className={`relative text-violet-400 dark:text-gray-300 hover:text-gray-700 font-medium transition-colors duration-300 group ${
+            location.pathname === item.path ? 'text-violet-800' : ''
           }`}
         >
           {item.name}
@@ -154,7 +157,7 @@ const Header = () => {
            <div className="md:flex items-center space-x-4 hidden mr-[10px] m-auto">
                
                <motion.a
-               className="text-gray-700 dark:text-gray-300 hover:text-violet-600 dark:hover:text-violet-400 transition-colors duration-300" 
+               className="text-violet-600 dark:text-gray-300 hover:text-gray-700 dark:hover:text-violet-400 transition-colors duration-300" 
                initial={{ opacity: 0, scale: 0.5 }} 
                 animate={{ opacity: 1, scale: 1 }}
                 transition={{delay: 1.3, duration: 0.8}}
@@ -164,7 +167,7 @@ const Header = () => {
                </motion.a>
 
                <motion.a
-               className="text-gray-700 dark:text-gray-300 hover:text-violet-600 dark:hover:text-violet-400 transition-colors duration-300" 
+               className="text-violet-600 dark:text-gray-300 hover:text-gray-700 dark:hover:text-violet-400 transition-colors duration-300" 
                initial={{ opacity: 0, scale: 0.5 }} 
                 animate={{ opacity: 1, scale: 1 }}
                 transition={{delay: 1.4, duration: 0.8}}
@@ -174,7 +177,7 @@ const Header = () => {
                </motion.a>
 
                <motion.a
-               className="text-gray-700 dark:text-gray-300 hover:text-violet-600 dark:hover:text-violet-400 transition-colors duration-300" 
+               className="text-violet-600 dark:text-gray-300 hover:text-gray-700 dark:hover:text-violet-400 transition-colors duration-300" 
                initial={{ opacity: 0, scale: 0.5 }} 
                 animate={{ opacity: 1, scale: 1 }}
                 transition={{delay: 1.5, duration: 0.8}}
@@ -205,11 +208,11 @@ const Header = () => {
            <motion.button 
            onClick={openContactForm}
            className="-  px-5 py-1 rounded-lg 
-  bg-gradient-to-r from-gray-400 to-gray-100 
+  bg-gradient-to-r from-violet-700 to-purple-700
   dark:from-gray-400 dark:to-gray-100 
-  text-violet-700 dark:text-violet-700 
+  text-white dark:text-violet-700 
   font-bold 
-  hover:from-violet-700 hover:to-purple-700 hover:text-white 
+  hover:from-gray-400 hover:to-gray-100 hover:text-violet-700 
   dark:hover:from-violet-700 dark:hover:to-purple-700 dark:hover:text-white 
   transition-all duration-500 
   hidden md:inline-block"
@@ -321,7 +324,7 @@ const Header = () => {
             className="bg-gray-100 dark:bg-gray-800 rounded-xl shadow-xl w-full max-w-md p-6 theme-transition"
             >
                 <div className="flex justify-between items-center mb-4">
-                    <h1 className="text-2xl font-bold text-gray-800 dark:text-gray-300">
+                    <h1 className="text-2xl font-bold bg-gradient-to-r from-purple-500 via-blue-300 to-pink-400 bg-clip-text text-transparent dark:text-gray-300">
                         Get In Touch
                     </h1>
 
@@ -333,7 +336,7 @@ const Header = () => {
                 {/* Input Form */}
                 <form onSubmit={handleSubmit} className="space-y-4">
                        <div>
-                        <label htmlFor="name" className="block  text-sm font-medium text-gray-800 dark:text-gray-300 mb-1">
+                        <label htmlFor="name" className="block  text-sm font-medium text-violet-700 dark:text-gray-300 mb-1">
                             Name
                             </label>
                             <input 
@@ -349,7 +352,7 @@ const Header = () => {
                        </div>
 
                        <div>
-                        <label htmlFor="email" className="block text-sm font-medium text-gray-800 dark:text-gray-300 mb-1">
+                        <label htmlFor="email" className="block text-sm font-medium text-violet-700 dark:text-gray-300 mb-1">
                             Email
                             </label>
                             <input 
@@ -366,7 +369,7 @@ const Header = () => {
 
 
                        <div>
-                        <label htmlFor="message" className="block text-sm font-medium text-gray-800 dark:text-gray-300 mb-1">
+                        <label htmlFor="message" className="block text-sm font-medium text-violet-700 dark:text-gray-300 mb-1">
                             Message
                             </label>
                             <textarea 
@@ -386,7 +389,7 @@ const Header = () => {
                        whileHover={{scale: 1.03}}
                        whileTap={{scale: 0.97}}
                        disabled={isSubmitting}
-                         className="w-full px-4 py-2 bg-gradient-to-r from-violet-600 to via-violet-400 hover:from-violet-700 hover:to-purple-700 transition-all duration-300 rounded-lg shadow-md hover:shadow-violet-600">
+                         className="w-full px-4 py-2 bg-gradient-to-r from-violet-600 via-purple-300 to-gray-500 hover:from-violet-700 hover:to-purple-700 transition-all duration-300 rounded-lg shadow-md hover:shadow-violet-600">
                          {isSubmitting ? "Sending..." : "Send Message"}
                        </motion.button>
                        {submitStatus && (
@@ -407,3 +410,4 @@ const Header = () => {
 };
 
 export default Header;
+

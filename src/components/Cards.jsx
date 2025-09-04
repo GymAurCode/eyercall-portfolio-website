@@ -42,9 +42,9 @@ function TiltCard({ title, desc, Icon, delay }) {
         onMouseMove={handleMouseMove}
         onMouseLeave={handleMouseLeave}
       >
-        <Icon className="w-12 h-12 text-purple-300 mb-4" />
-        <h2 className="text-2xl font-bold mb-3">{title}</h2>
-        <p className="text-sm text-gray-600 dark:text-gray-200 text-center leading-relaxed">{desc}</p>
+        <Icon className="w-12 h-12 text-purple-500 mb-4" />
+        <h2 className="text-2xl font-bold mb-3 bg-gradient-to-r from-purple-700 via-blue-500 to-pink-600 bg-clip-text text-transparent dark:text-gray-300">{title}</h2>
+        <p className="text-sm text-gray-600 dark:text-gray-300 text-center leading-relaxed">{desc}</p>
       </motion.div>
     </div>
   );
@@ -52,7 +52,7 @@ function TiltCard({ title, desc, Icon, delay }) {
 
 function CardsSection() {
   return (
-    <section className="pt-10 min-h-screen z-30 bg-gradient-to-b from-gray-50 to-gray-100 dark:from-black dark:to-purple-800 flex items-center justify-center px-6 py-12 relative theme-transition">
+    <section className="pt-10 min-h-screen z-30 bg-gradient-to-b from-purple-200 to-gray-100 dark:from-black dark:to-purple-800 flex items-center justify-center px-6 py-12 relative theme-transition">
       <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8 w-full max-w-6xl justify-items-center">
         <TiltCard
           aos="fade-up"

@@ -11,7 +11,7 @@ const Page = React.forwardRef((props, ref) => {
   return (
     <div
       ref={ref}
-      className={`w-full h-full flex items-center  justify-center text-center font-semibold text-lg shadow-md  ${
+      className={`w-full h-full flex items-center  justify-center text-center font-semibold text-lg shadow-md ${
         props.className || ""
       }`}
       style={{
@@ -368,7 +368,7 @@ function MyBook() {
   const poresDataUrl = `url("data:image/svg+xml;utf8,${encodeURIComponent(poresSVG)}")`;
 
   return (
-    <div className=" bg-gradient-to-b from-gray-200 to-gray-100 dark:bg-gradient-to-tr dark:from-gray-900 dark:to-purple-700 text-gray-800 dark:text-white py-12 px-6 flex items-center justify-center z-50  theme-transition pt-[120px] pb-[250px]">
+    <div className=" bg-gradient-to-tr from-purple-300 to-gray-100 dark:bg-gradient-to-tr dark:from-gray-900 dark:to-purple-700 text-gray-800 dark:text-white py-12 px-6 flex items-center justify-center z-50  theme-transition pt-[120px] pb-[250px]">
       <HTMLFlipBook
         width={370}
         height={500}

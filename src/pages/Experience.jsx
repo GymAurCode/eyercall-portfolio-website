@@ -87,10 +87,10 @@ export default function Experience() {
   ];
 
   return (
-    <div className="min-h-screen bg-gradient-to-bl pt-32 from-purple-900 to-black flex flex-col items-center justify-center relative z-30 py-16 pb-[200px]">
+    <div className="min-h-screen bg-gradient-to-tr pt-32 from-purple-300 to-gray-100 dark:from-purple-900 dark:to-black flex flex-col items-center justify-center relative z-30 py-16 pb-[200px]">
       <h1
         data-aos="fade-down"
-        className="text-5xl md:text-6xl font-bold text-white mb-12 text-center"
+        className="text-5xl md:text-6xl font-bold bg-gradient-to-r from-purple-700 via-blue-500 to-pink-600 bg-clip-text text-transparent dark:text-white mb-12 text-center"
       >
         Our Experience
       </h1>
@@ -101,9 +101,9 @@ export default function Experience() {
             key={catIndex}
             data-aos="fade-up"
             data-aos-delay={catIndex * 100}
-            className="bg-white/10 backdrop-blur-lg border border-white/20 p-6 rounded-2xl shadow-lg"
+            className="bg-violet-300  dark:bg-white/10 backdrop-blur-lg border border-white/20 p-6 rounded-2xl shadow-lg"
           >
-            <h2 className="text-2xl md:text-3xl font-semibold text-white mb-4">
+            <h2 className="text-2xl md:text-3xl font-semibold bg-gradient-to-r from-purple-700 via-blue-500 to-pink-600 bg-clip-text text-transparent dark:text-white mb-4">
               {category.title}
             </h2>
 
@@ -113,9 +113,9 @@ export default function Experience() {
                   key={projIndex}
                   data-aos="zoom-in"
                   data-aos-delay={projIndex * 50}
-                  className="bg-white/10 backdrop-blur-lg border border-white/20 p-3 rounded-xl shadow-md hover:scale-105 transition-transform duration-300 text-center"
+                  className="bg-gray-400  dark:bg-white/10 backdrop-blur-lg border border-gray-500 dark:border-white/20 p-3 rounded-xl shadow-md hover:scale-105 transition-transform duration-300 text-center"
                 >
-                  <h3 className="text-white font-medium text-sm">{project}</h3>
+                  <h3 className="text-gray-800 dark:text-white font-medium text-sm">{project}</h3>
                 </div>
               ))}
             </div>
@@ -132,7 +132,7 @@ export default function Experience() {
         </div>
 
         <Link to="/contact">
-          <button className="mt-4 ml-4 bg-white/20 backdrop-blur-lg text-white font-semibold px-8 py-4 rounded-2xl border border-white/30 hover:bg-white/30 transition-all duration-300">
+          <button className="mt-4 ml-4 bg-gray-400 dark:bg-white/20 backdrop-blur-lg text-black/80 dark:text-white font-semibold px-8 py-4 rounded-2xl border border-gray-500 dark:border-white/30 hover:bg-white/30 transition-all duration-300">
             Contact Us
           </button>
         </Link>
