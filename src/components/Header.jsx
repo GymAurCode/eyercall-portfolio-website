@@ -5,7 +5,7 @@ import { Link, useLocation } from "react-router-dom";
 import ThemeToggle from "./ThemeToggle";
 import emailjs from "@emailjs/browser";
 import { emailjsConfig } from "../config/emailjs.js";
-import ThemeImage  from "./ThemeImage.jsx";
+import ThemeImage from "./ThemeImage.jsx"
 
 const Header = () => {
     const location = useLocation();
@@ -108,7 +108,7 @@ const Header = () => {
         >
           <Link to="/" className="flex items-center">
             <div className="h-10 w-10 rounded-xl bg-gradient-to-r  flex items-center justify-center text-purple-600 font-bold text-xl mr-3 ">
-              <ThemeImage/>
+              <ThemeImage />
             </div>
         <span className="jump-glitch text-[25px] font-bold bg-gradient-to-r from-purple-700 via-blue-500 to-pink-600 dark:from-gray-300 dark:to-gray-500 bg-clip-text text-transparent">
   Eyercall
@@ -117,7 +117,7 @@ const Header = () => {
         </motion.div>
 
         {/* Desktop Navigation */}
-       <nav className="ml-[400px] lg:flex hidden space-x-8">
+       <nav className="ml-[400px] lg:flex hidden space-x-8 ">
   {[
     { name: "Home", path: "/" },
     { name: "About", path: "/about" },
@@ -138,14 +138,20 @@ const Header = () => {
       >
         <Link
           to={item.path}
-          className={`relative text-violet-400 dark:text-gray-300 hover:text-gray-700 font-medium transition-colors duration-300 group ${
+          className={`relative font-bold text-violet-400 dark:text-gray-300 hover:text-gray-700  transition-colors duration-300 group ${
             location.pathname === item.path ? 'text-violet-800' : ''
           }`}
         >
           {item.name}
-          <span className={`absolute -bottom-[6px] left-1/2 h-0.5 dark:bg-gradient-to-r dark:from-gray-600 dark:to-gray-400 group-hover:w-[120%] transition-all duration-300 transform -translate-x-1/2 ${
-            location.pathname === item.path ? 'w-[120%]' : 'w-0'
-          }`}></span>
+          <span
+  className={`absolute -bottom-[6px] left-1/2 h-0.5 
+    bg-gradient-to-r from-purple-800 via-blue-500 to-pink-400 
+    dark:from-gray-600 dark:to-gray-400
+    group-hover:w-[120%] transition-all duration-300 transform -translate-x-1/2
+    ${location.pathname === item.path ? 'w-[120%]' : 'w-0'}`}
+></span>
+
+
         </Link>
       </motion.div>
   ))}
@@ -247,7 +253,7 @@ const Header = () => {
         opacity: isOpen ? 1 : 0,
         height: isOpen ? "auto" : 0,
      }}
-     className="md:hidden overflow-hidden  bg-gray-100 dark:bg-gray-900 shadow-lg px-4 py-5 space-y-5 theme-transition">
+     className="md:hidden overflow-hidden bg-gray-100 dark:bg-gray-900 shadow-lg px-4 py-5 space-y-5 theme-transition">
           <nav className="flex flex-col space-y-3">
               {[
                 { name: "Home", path: "/" },
