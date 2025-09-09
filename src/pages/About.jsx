@@ -586,9 +586,9 @@ function MyBook() {
   {/* Profile Image */}
   <div className="w-36 h-36 rounded-full overflow-hidden border-4 border-indigo-500 shadow-lg mb-4 ml-[87px] ">
     <img 
-      src="/images/hussnain.jpg" 
+      src="./images/hussnain.png" 
       alt="Team Member" 
-      className="w-full h-full object-cover"
+      className="w-full h-full object-cover bg-gray-300"
     />
   </div>
 
