@@ -132,7 +132,7 @@ export default function Experience() {
         </div>
 
         <Link to="/contact">
-          <button className="mt-4 ml-4 bg-gray-400 dark:bg-white/20 backdrop-blur-lg text-black/80 dark:text-white font-semibold px-8 py-4 rounded-2xl border border-gray-500 dark:border-white/30 hover:bg-white/30 transition-all duration-300">
+          <button className="cont-foot mt-4 ml-4 bg-gray-400 dark:bg-white/20 backdrop-blur-lg text-black/80 dark:text-white font-semibold px-8 py-4 rounded-2xl border border-gray-500 dark:border-white/30 hover:bg-white transition-all duration-200 dark:hover:border-solid  dark:hover:border-black dark:hover:bg-gradient-to-r dark:hover:from-gray-900 dark:hover:to-purple-900 ">
             Contact Us
           </button>
         </Link>

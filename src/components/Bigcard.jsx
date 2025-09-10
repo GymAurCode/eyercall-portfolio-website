@@ -12,11 +12,19 @@ function CeoCard() {
           data-aos="fade-right"
           data-aos-delay="100"
         >
-          <img
-            src="/images/ceo.png"
-            alt="CEO"
-            className="w-44 h-44 md:w-52 md:h-52 rounded-full border-4 border-gray-400 dark:border-purple-400 shadow-lg mb-6 object-cover bg-gray-300 dark:bg-purple-500"
-          />
+        <div className="relative w-44 h-44 md:w-52 md:h-52">
+  {/* Rotating border */}
+  <div className="absolute inset-1 rounded-full border-t-[6px] border-purple-600 animate-slow-spin"></div>
+
+  {/* Image */}
+  <img
+    src="/images/ceo.png"
+    alt="CEO"
+    className="w-full h-full rounded-full border-4 border-transparent shadow-lg mb-6 object-cover bg-gray-300  dark:bg-transparent"
+  />
+</div>
+
+
           <h2 className="text-3xl font-bold mb-2">Muhammad Asad</h2>
           <p className=" text-purple-700 dark:text-purple-300 mb-6">CEO, Eyercall</p>
           

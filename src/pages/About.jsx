@@ -575,7 +575,16 @@ function MyBook() {
 
 
 
-<div className="demopage bg-amber-50">page 4</div>
+<div className="demopage bg-amber-50">
+  <div className="flex justify-center flex-col items-center ">
+    <h1 className="font-bold text-gray-800 mt-4 text-xl underline"> 
+      CEO - Idea and Vision
+      </h1>
+     <p className="text-justify w-72 m-4">
+      Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ratione officiis, sint totam unde aut molestias exercitationem? In minus eius eos laudantium assumenda doloremque quae unde voluptatum optio debitis, odit magni atque natus quidem ad?
+     </p>
+  </div>
+</div>
 
 
 

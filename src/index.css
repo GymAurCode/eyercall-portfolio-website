@@ -117,5 +117,15 @@ html {
   will-change: transform;
 }
 
+@keyframes spin-slow {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
 
-
+.animate-slow-spin {
+  animation: spin-slow 3s linear infinite ; /* 4s = slower rotation */
+}

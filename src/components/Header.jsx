@@ -91,7 +91,7 @@ const Header = () => {
     };
 
   return (
-    <header className="absolute w-full z-50 transition-all duration-300 theme-transition">
+    <header className="absolute w-full z-50 transition-all bg-inherit  duration-300 theme-transition">
       <div className="container mx-auto px-4 sm:px-6 lg:px-8 flex items-center justify-between h-16 md:h-20">
         {/* Logo Name */}
         <motion.div
