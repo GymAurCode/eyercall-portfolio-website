@@ -43,7 +43,7 @@ body {
   color: var(--text-primary);
   transition: background-color 0.3s ease, color 0.3s ease;
   z-index: 999;
-  cursor: none;
+  /* cursor: none; */
   padding-bottom: 100vh;
 }
 
@@ -128,4 +128,66 @@ html {
 
 .animate-slow-spin {
   animation: spin-slow 3s linear infinite ; /* 4s = slower rotation */
+}
+
+/* Glow Border Animations */
+@keyframes glowSpin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+@keyframes glowSpinReverse {
+  0% { transform: rotate(360deg); }
+  100% { transform: rotate(0deg); }
+}
+
+.glow-border {
+  position: absolute;
+  inset: -4px;
+  border-radius: 50%;
+  padding: 4px;
+  background: conic-gradient(
+    from 0deg,
+    transparent 0deg,
+    hsl(258 90% 66%) 45deg,
+    hsl(258 90% 80%) 90deg,
+    hsl(258 90% 66%) 135deg,
+    transparent 180deg,
+    transparent 225deg,
+    hsl(258 90% 66%) 270deg,
+    hsl(258 90% 80%) 315deg,
+    hsl(258 90% 66%) 360deg
+  );
+  animation: glowSpin 3s linear infinite;
+  filter: blur(1px);
+}
+
+.glow-border-inner {
+  position: absolute;
+  inset: -2px;
+  border-radius: 50%;
+  background: conic-gradient(
+    from 180deg,
+    transparent 0deg,
+    hsl(258 90% 66%) 90deg,
+    transparent 180deg,
+    hsl(258 90% 66%) 270deg,
+    transparent 360deg
+  );
+  animation: glowSpinReverse 4s linear infinite;
+  opacity: 0.7;
+}
+
+/* .glow-effect {
+  box-shadow: 
+    0 0 20px hsl(258 90% 66% / 0.3),
+    0 0 40px hsl(258 90% 66% / 0.2),
+    0 0 60px hsl(258 90% 66% / 0.1);
+} */
+
+.dark .glow-effect {
+  box-shadow: 
+    0 0 20px hsl(258 90% 66% / 0.5),
+    0 0 40px hsl(258 90% 66% / 0.3),
+    0 0 60px hsl(258 90% 66% / 0.2);
 }

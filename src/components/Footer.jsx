@@ -4,7 +4,7 @@ function Footer() {
   return (
     <>
       {/* ✅ Background Footer */}
-      <footer className="fixed bottom-0 left-0 w-full h-[650px] -z-10 bg-gradient-to-br from-purple-300 via-purple-700 to-gray-500 dark:from-black dark:to-black flex flex-col justify-center items-center overflow-hidden theme-transition">
+      <footer className="fixed bottom-0 left-0 w-full h-[750px] -z-10 bg-gradient-to-br from-purple-300 via-purple-700 to-gray-500 dark:from-black dark:to-black flex flex-col justify-center items-center overflow-hidden theme-transition">
         
         {/* ✅ Main Animated Heading */}
         <h1
@@ -25,27 +25,27 @@ function Footer() {
         {/* ✅ Social Links */}
         <div className=" z-20 absolute bottom-10 flex flex-wrap gap-8 text-white dark:text-purple-200 text-3xl md:text-4xl 
                  justify-center px-6">
-  <a href="https://github.com" target="_blank" rel="noopener noreferrer"
+  <a href="https://github.com/eyercall" target="_blank" rel="noopener noreferrer"
      className="hover:text-black hover:bg-white hover:rounded-full hover:scale-125 transition-all duration-300 cursor-pointer transform hover:rotate-12">
     <FaGithub />
   </a>
-  <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer"
+  <a href="https://www.linkedin.com/in/eyer-call-18635a25b/" target="_blank" rel="noopener noreferrer"
      className="hover:text-blue-400   hover:scale-125 transition-all duration-300 cursor-pointer transform hover:rotate-12">
     <FaLinkedin />
   </a>
   <a
-  href="https://instagram.com"
+  href="https://www.instagram.com/eyercall/"
   target="_blank"
   rel="noopener noreferrer"
   className="cursor-pointer transform transition-all duration-300 hover:scale-125 hover:rotate-12 hover:text-pink-500 dark:text-purple-200 dark:hover:text-pink-600 "
 >
   <FaInstagram />
 </a>
-  <a href="https://twitter.com" target="_blank" rel="noopenher noreferrer"
+  <a href="https://x.com/eyercall" target="_blank" rel="noopenher noreferrer"
      className="hover:text-blue-600 hover:scale-125 transition-all duration-300 cursor-pointer transform hover:rotate-12">
     <FaTwitter />
   </a>
-  <a href="mailto:contact@eyercall.com"
+  <a href="mailto:eyercall@gmail.com"
      className="hover:text-green-700 hover:scale-125 transition-all duration-300 cursor-pointer transform hover:rotate-12">
     <FaEnvelope />
   </a>

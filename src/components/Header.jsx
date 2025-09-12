@@ -110,14 +110,14 @@ const Header = () => {
             <div className="h-10 w-10 rounded-xl bg-gradient-to-r  flex items-center justify-center text-purple-600 font-bold text-xl mr-3 ">
               <ThemeImage />
             </div>
-        <span className="jump-glitch text-[25px] font-bold bg-gradient-to-r from-purple-700 via-blue-500 to-pink-600 dark:from-gray-300 dark:to-gray-500 bg-clip-text text-transparent">
+        <span className="jump-glitch text-[25px] mr-[170px] font-bold bg-gradient-to-r from-purple-700 via-blue-500 to-pink-600 dark:from-gray-300 dark:to-gray-500 bg-clip-text text-transparent">
   Eyercall
 </span>
           </Link>
         </motion.div>
 
         {/* Desktop Navigation */}
-       <nav className="ml-[400px] lg:flex hidden space-x-8 ">
+       <nav className="ml-auto lg:flex hidden space-x-8 ">
   {[
     { name: "Home", path: "/" },
     { name: "About", path: "/about" },
@@ -138,7 +138,7 @@ const Header = () => {
       >
         <Link
           to={item.path}
-          className={`relative font-bold text-violet-400 dark:text-gray-300 hover:text-gray-700  transition-colors duration-300 group ${
+          className={`relative font-bold text-violet-500 dark:text-gray-300 hover:text-gray-700  transition-colors duration-300 group ${
             location.pathname === item.path ? 'text-violet-800' : ''
           }`}
         >
@@ -168,7 +168,7 @@ const Header = () => {
                 animate={{ opacity: 1, scale: 1 }}
                 transition={{delay: 1.3, duration: 0.8}}
                 
-                href="#">
+                href="https://github.com/eyercall" target="_blank">
                   <FiGithub className="w-6 h-6" />
                </motion.a>
 
@@ -178,7 +178,7 @@ const Header = () => {
                 animate={{ opacity: 1, scale: 1 }}
                 transition={{delay: 1.4, duration: 0.8}}
                 
-                href="#">
+                href="https://x.com/eyercall"  target="_blank">
                   <FiTwitter className="w-6 h-6" />
                </motion.a>
 
@@ -188,7 +188,7 @@ const Header = () => {
                 animate={{ opacity: 1, scale: 1 }}
                 transition={{delay: 1.5, duration: 0.8}}
                 
-                href="#">
+                 href="https://www.linkedin.com/in/eyer-call-18635a25b/" target="_blank">
                   <FiLinkedin className="w-6 h-6" />
                </motion.a>
 
@@ -277,15 +277,16 @@ const Header = () => {
           <div className="pt-4 border-t border-gray-300 dark:border-gray-700">
 
             <div className="flex space-x-5 items-center">
-              <a href="#">
+              <a href="https://github.com/eyercall" target="_blank">
                 <FiGithub className="w-5 h-5 text-gray-800 dark:text-gray-300"/>
               </a>
 
-              <a href="#">
+              <a href="https://x.com/eyercall"  target="_blank">
                 <FiTwitter className="w-5 h-5 text-gray-800 dark:text-gray-300"/>
               </a>
 
-              <a href="#">
+              <a  href="https://www.linkedin.com/in/eyer-call-18635a25b/"
+      target="_blank">
                 <FiLinkedin className="w-5 h-5 text-gray-800 dark:text-gray-300"/>
               </a>
               

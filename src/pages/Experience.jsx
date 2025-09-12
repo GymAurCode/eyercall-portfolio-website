@@ -101,9 +101,11 @@ export default function Experience() {
             key={catIndex}
             data-aos="fade-up"
             data-aos-delay={catIndex * 100}
-            className="bg-violet-300  dark:bg-white/10 backdrop-blur-lg border border-white/20 p-6 rounded-2xl shadow-lg"
+           className="bg-transparent  dark:bg-white/10 backdrop-blur-xl hover:border-2 transition-colors duration-500 ease-in hover:border-purple-300 shadow-xl rounded-2xl p-6"
+
+
           >
-            <h2 className="text-2xl md:text-3xl font-semibold bg-gradient-to-r from-purple-700 via-blue-500 to-pink-600 bg-clip-text text-transparent dark:text-white mb-4">
+            <h2 className="text-2xl md:text-3xl font-semibold bg-gradient-to-r from-purple-800 via-blue-700 to-pink-600 w-[300px] bg-clip-text text-transparent dark:text-white mb-4">
               {category.title}
             </h2>
 
@@ -113,7 +115,7 @@ export default function Experience() {
                   key={projIndex}
                   data-aos="zoom-in"
                   data-aos-delay={projIndex * 50}
-                  className="bg-gray-400  dark:bg-white/10 backdrop-blur-lg border border-gray-500 dark:border-white/20 p-3 rounded-xl shadow-md hover:scale-105 transition-transform duration-300 text-center"
+                  className="bg-purple-300  dark:bg-white/10 backdrop-blur-lg border border-gray-500 dark:border-white/20 p-3 rounded-xl shadow-md hover:scale-105 transition-transform duration-300 text-center"
                 >
                   <h3 className="text-gray-800 dark:text-white font-medium text-sm">{project}</h3>
                 </div>
