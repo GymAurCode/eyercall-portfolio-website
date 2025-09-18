@@ -1,6 +1,6 @@
 import { motion, AnimatePresence , useMotionValue, useTransform  } from "framer-motion";
-import { FiGithub, FiTwitter, FiLinkedin, FiMenu, FiX, FiUser } from "react-icons/fi"; 
-import { useEffect, useRef, useState } from "react";
+import { FiGithub, FiTwitter, FiLinkedin, FiMenu, FiX } from "react-icons/fi"; 
+import { useEffect, useState } from "react";
 import { Link, useLocation } from "react-router-dom";
 import ThemeToggle from "./ThemeToggle";
 import emailjs from "@emailjs/browser";
@@ -18,58 +18,7 @@ const Header = () => {
         setIsOpen(!isOpen);
     };
 
-    // Visitor counter state (global via CountAPI)
-    const [visitCount, setVisitCount] = useState(1000);
-    const hasIncrementedRef = useRef(false);
-
-    // Increment shared counter on mount and fetch the latest value
-    useEffect(() => {
-        if (hasIncrementedRef.current) return; // prevent double-increment in React StrictMode (dev)
-        hasIncrementedRef.current = true;
-
-        const namespace = "eyercall";
-        const key = "site-views";
-        const baseValue = 1000;
-
-        const createIfMissing = async () => {
-            try {
-                await fetch(
-                    `https://api.countapi.xyz/create?namespace=${namespace}&key=${key}&value=${baseValue}`,
-                    { cache: "no-store" }
-                );
-            } catch (_) {
-                // ignore
-            }
-        };
-
-        const hitAndGet = async () => {
-            try {
-                // Prefer update endpoint, then fallback to get
-                const res = await fetch(`https://api.countapi.xyz/update/${namespace}/${key}/?amount=1`, { cache: "no-store" });
-                if (res.ok) {
-                    const data = await res.json();
-                    if (data && typeof data.value === "number") {
-                        setVisitCount(data.value);
-                        return;
-                    }
-                }
-                const getRes = await fetch(`https://api.countapi.xyz/get/${namespace}/${key}`, { cache: "no-store" });
-                if (getRes.ok) {
-                    const getData = await getRes.json();
-                    if (getData && typeof getData.value === "number") {
-                        setVisitCount(getData.value);
-                    }
-                }
-            } catch (_) {
-                // ignore
-            }
-        };
-
-        (async () => {
-            await createIfMissing();
-            await hitAndGet();
-        })();
-    }, []);
+    // Visitor counter removed
 
     // State to track if the contact form is open
     const [contactFormOpen, setContactFormOpen] = useState(false);
@@ -214,21 +163,7 @@ const Header = () => {
        {/* Social icons - Desktop */}
 
           <div className="md:flex items-center space-x-4 hidden mr-[10px] m-auto">
-              {/* Visitor counter */}
-              <motion.div
-                className="relative flex items-center"
-                initial={{ opacity: 0, scale: 0.5 }}
-                animate={{ opacity: 1, scale: 1 }}
-                transition={{delay: 1.2, duration: 0.8}}
-              >
-                <div className="relative">
-                  <FiUser className="w-6 h-6 text-violet-600 dark:text-gray-300" />
-                  <span className="absolute -top-2 -right-2 text-[10px] px-1.5 py-0.5 rounded-full bg-violet-600 text-white dark:bg-gray-300 dark:text-violet-700">
-                    {visitCount}
-                  </span>
-                </div>
-              </motion.div>
-               
+              
                <motion.a
                className="text-violet-600 dark:text-gray-300 hover:text-gray-700 dark:hover:text-violet-400 transition-colors duration-300" 
                initial={{ opacity: 0, scale: 0.5 }} 
@@ -344,13 +279,6 @@ const Header = () => {
           <div className="pt-4 border-t border-gray-300 dark:border-gray-700">
 
             <div className="flex space-x-5 items-center">
-              {/* Visitor counter (mobile) */}
-              <div className="relative">
-                <FiUser className="w-5 h-5 text-gray-800 dark:text-gray-300"/>
-                <span className="absolute -top-2 -right-2 text-[10px] px-1 py-0.5 rounded-full bg-violet-600 text-white dark:bg-gray-300 dark:text-violet-700">
-                  {visitCount}
-                </span>
-              </div>
               <a href="https://github.com/eyercall" target="_blank">
                 <FiGithub className="w-5 h-5 text-gray-800 dark:text-gray-300"/>
               </a>
