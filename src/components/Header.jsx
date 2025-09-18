@@ -1,6 +1,6 @@
 import { motion, AnimatePresence , useMotionValue, useTransform  } from "framer-motion";
 import { FiGithub, FiTwitter, FiLinkedin, FiMenu, FiX, FiUser } from "react-icons/fi"; 
-import { useEffect, useState } from "react";
+import { useEffect, useRef, useState } from "react";
 import { Link, useLocation } from "react-router-dom";
 import ThemeToggle from "./ThemeToggle";
 import emailjs from "@emailjs/browser";
@@ -18,21 +18,45 @@ const Header = () => {
         setIsOpen(!isOpen);
     };
 
-    // Visitor counter state
-    const [visitCount, setVisitCount] = useState(0);
+    // Visitor counter state (global via CountAPI)
+    const [visitCount, setVisitCount] = useState(1000);
+    const hasIncrementedRef = useRef(false);
 
-    // Increment visit count on mount (per-device via localStorage)
+    // Increment shared counter on mount and fetch the latest value
     useEffect(() => {
-        try {
-            const stored = localStorage.getItem("visitCount");
-            const previousCount = stored ? parseInt(stored, 10) || 0 : 0;
-            const nextCount = previousCount + 1;
-            localStorage.setItem("visitCount", String(nextCount));
-            setVisitCount(nextCount);
-        } catch (_) {
-            // Ignore storage errors
-            setVisitCount((c) => (c > 0 ? c : 1));
-        }
+        if (hasIncrementedRef.current) return; // prevent double-increment in React StrictMode (dev)
+        hasIncrementedRef.current = true;
+
+        const namespace = "eyercall";
+        const key = "site-views";
+        const baseValue = 1000;
+
+        const createIfMissing = async () => {
+            try {
+                await fetch(
+                    `https://api.countapi.xyz/create?namespace=${namespace}&key=${key}&value=${baseValue}`
+                );
+            } catch (_) {
+                // ignore
+            }
+        };
+
+        const hitAndGet = async () => {
+            try {
+                const res = await fetch(`https://api.countapi.xyz/hit/${namespace}/${key}`);
+                const data = await res.json();
+                if (data && typeof data.value === "number") {
+                    setVisitCount(data.value);
+                }
+            } catch (_) {
+                // ignore
+            }
+        };
+
+        (async () => {
+            await createIfMissing();
+            await hitAndGet();
+        })();
     }, []);
 
     // State to track if the contact form is open
