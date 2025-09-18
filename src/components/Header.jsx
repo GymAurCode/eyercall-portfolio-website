@@ -1,5 +1,5 @@
 import { motion, AnimatePresence , useMotionValue, useTransform  } from "framer-motion";
-import { FiGithub, FiTwitter, FiLinkedin, FiMenu, FiX } from "react-icons/fi"; 
+import { FiGithub, FiTwitter, FiLinkedin, FiMenu, FiX, FiUser } from "react-icons/fi"; 
 import { useEffect, useState } from "react";
 import { Link, useLocation } from "react-router-dom";
 import ThemeToggle from "./ThemeToggle";
@@ -17,6 +17,23 @@ const Header = () => {
     const toogleMenu = () => {
         setIsOpen(!isOpen);
     };
+
+    // Visitor counter state
+    const [visitCount, setVisitCount] = useState(0);
+
+    // Increment visit count on mount (per-device via localStorage)
+    useEffect(() => {
+        try {
+            const stored = localStorage.getItem("visitCount");
+            const previousCount = stored ? parseInt(stored, 10) || 0 : 0;
+            const nextCount = previousCount + 1;
+            localStorage.setItem("visitCount", String(nextCount));
+            setVisitCount(nextCount);
+        } catch (_) {
+            // Ignore storage errors
+            setVisitCount((c) => (c > 0 ? c : 1));
+        }
+    }, []);
 
     // State to track if the contact form is open
     const [contactFormOpen, setContactFormOpen] = useState(false);
@@ -160,7 +177,21 @@ const Header = () => {
 
        {/* Social icons - Desktop */}
 
-           <div className="md:flex items-center space-x-4 hidden mr-[10px] m-auto">
+          <div className="md:flex items-center space-x-4 hidden mr-[10px] m-auto">
+              {/* Visitor counter */}
+              <motion.div
+                className="relative flex items-center"
+                initial={{ opacity: 0, scale: 0.5 }}
+                animate={{ opacity: 1, scale: 1 }}
+                transition={{delay: 1.2, duration: 0.8}}
+              >
+                <div className="relative">
+                  <FiUser className="w-6 h-6 text-violet-600 dark:text-gray-300" />
+                  <span className="absolute -top-2 -right-2 text-[10px] px-1.5 py-0.5 rounded-full bg-violet-600 text-white dark:bg-gray-300 dark:text-violet-700">
+                    {visitCount}
+                  </span>
+                </div>
+              </motion.div>
                
                <motion.a
                className="text-violet-600 dark:text-gray-300 hover:text-gray-700 dark:hover:text-violet-400 transition-colors duration-300" 
@@ -277,6 +308,13 @@ const Header = () => {
           <div className="pt-4 border-t border-gray-300 dark:border-gray-700">
 
             <div className="flex space-x-5 items-center">
+              {/* Visitor counter (mobile) */}
+              <div className="relative">
+                <FiUser className="w-5 h-5 text-gray-800 dark:text-gray-300"/>
+                <span className="absolute -top-2 -right-2 text-[10px] px-1 py-0.5 rounded-full bg-violet-600 text-white dark:bg-gray-300 dark:text-violet-700">
+                  {visitCount}
+                </span>
+              </div>
               <a href="https://github.com/eyercall" target="_blank">
                 <FiGithub className="w-5 h-5 text-gray-800 dark:text-gray-300"/>
               </a>
