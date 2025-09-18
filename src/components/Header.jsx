@@ -34,7 +34,8 @@ const Header = () => {
         const createIfMissing = async () => {
             try {
                 await fetch(
-                    `https://api.countapi.xyz/create?namespace=${namespace}&key=${key}&value=${baseValue}`
+                    `https://api.countapi.xyz/create?namespace=${namespace}&key=${key}&value=${baseValue}`,
+                    { cache: "no-store" }
                 );
             } catch (_) {
                 // ignore
@@ -43,10 +44,21 @@ const Header = () => {
 
         const hitAndGet = async () => {
             try {
-                const res = await fetch(`https://api.countapi.xyz/hit/${namespace}/${key}`);
-                const data = await res.json();
-                if (data && typeof data.value === "number") {
-                    setVisitCount(data.value);
+                // Prefer update endpoint, then fallback to get
+                const res = await fetch(`https://api.countapi.xyz/update/${namespace}/${key}/?amount=1`, { cache: "no-store" });
+                if (res.ok) {
+                    const data = await res.json();
+                    if (data && typeof data.value === "number") {
+                        setVisitCount(data.value);
+                        return;
+                    }
+                }
+                const getRes = await fetch(`https://api.countapi.xyz/get/${namespace}/${key}`, { cache: "no-store" });
+                if (getRes.ok) {
+                    const getData = await getRes.json();
+                    if (getData && typeof getData.value === "number") {
+                        setVisitCount(getData.value);
+                    }
                 }
             } catch (_) {
                 // ignore
