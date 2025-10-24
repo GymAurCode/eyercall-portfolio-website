@@ -43,7 +43,7 @@ body {
   color: var(--text-primary);
   transition: background-color 0.3s ease, color 0.3s ease;
   z-index: 999;
-  /* cursor: none; */
+  cursor: none;
   padding-bottom: 100vh;
 }
 
@@ -116,5 +116,4 @@ html {
   transform: translateY(0);
   will-change: transform;
 }
-
 
