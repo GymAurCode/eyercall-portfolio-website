@@ -522,36 +522,37 @@ function MyBook() {
 
 
 
-<div className="demopage bg-amber-50 flex items-center justify-center ">
-  <div className="h-[500px] md:h-[500px] w-[370px] md:w-[370px] bg-amber-50 backdrop-blur-md rounded-2xl shadow-2xl border border-gray-200 p-4 md:p-6 flex flex-col items-center text-center relative">
+<div className="demopage bg-amber-50 flex items-center justify-center  ">
+  <div className="h-[500px] md:h-[500px] w-[370px] md:w-[370px]  bg-amber-50 backdrop-blur-md rounded-2xl shadow-2xl border border-gray-200 p-4 md:p-6 flex flex-col items-center text-center relative">
     
     {/* Decorative Gradient Circle Background */}
     <div className="absolute top-0 left-0 w-full h-1/3 rounded-t-2xl"></div>
 
     {/* CEO Image */}
-    <img
-      src="/images/ceo.png"
-      alt="CEO Eyercall"
-      className="w-28 h-28 rounded-full object-cover border-4 border-white shadow-lg relative z-10 mt-10"
+     <div className="w-36 h-36 rounded-full overflow-hidden border-4 border-indigo-500 shadow-lg mb-4">
+    <img 
+      src="./images/ceo.png" 
+      alt="Team Member" 
+      className="w-full h-full object-cover bg-gray-300"
     />
-
+  </div>
     {/* CEO Name */}
     <h2 className="mt-4 text-2xl font-bold text-gray-800">Muhammad Asad</h2>
 
     {/* CEO Title */}
-    <p className="text-sm text-gray-500">Chief Executive Officer - Eyercall</p>
+    <p className="text-sm font-bold text-blue-600">Chief Executive Officer - Eyercall</p>
 
     {/* Divider */}
-    <div className="w-16 h-[2px] bg-amber-400 my-3 rounded-full"></div>
+    <div className="w-16 h-[2px] bg-blue-600 my-3 rounded-full"></div>
 
     {/* Short Bio */}
-    <p className="text-gray-600 text-sm leading-relaxed px-4">
+    <p className="text-gray-600 text-sm leading-relaxed px-4 text-justify">
       Driving Eyercall’s mission forward with innovation, trust, and a vision to deliver 
       clean water solutions worldwide. Focused on long-term growth and social impact.
     </p>
 
     {/* Achievements / Highlights */}
-    <ul className="mt-4 text-sm text-gray-700 space-y-1">
+    <ul className="mt-4 text-sm text-gray-700 space-y-1 text-left -ml-[60px]">
       <li>✔ 10+ Years of Industry Experience</li>
       <li>✔ Visionary Leadership</li>
       <li>✔ Social Impact Initiatives</li>
@@ -573,9 +574,29 @@ function MyBook() {
 
 
 
+<div className="demopage bg-amber-50  py-10">
+  <div className="flex flex-col items-center text-center max-w-2xl mx-auto px-4">
+    <h1 className="font-bold text-gray-800  text-2xl underline">
+      CEO - Idea and Vision
+    </h1>
 
+    {/* Paragraph */}
+    <p className="mt-6 text-gray-700 text-justify leading-relaxed text-sm w-[300px]">
+      <span className="font-semibold">M. Asad</span> is the visionary founder and CEO of 
+      <span className="font-semibold"> Eyercall</span>, a next-generation video communication 
+      platform designed to redefine the way people connect, collaborate, and learn. His idea for Eyercall 
+      was born from a passion to create a secure, reliable, and student-friendly alternative 
+      to global platforms integrating not only seamless video calling 
+      but also real-time chat and collaboration tools.
+    </p>
+    <p className="text-justify text-sm  w-[300px] text-gray-700 mt-6">
+      <span className="font-semibold">M. Asad</span> envisions Eyercall as a global platform that helps students, teachers, and professionals connect easily. His vision is to make Eyercall advanced yet simple, accessible for everyone, and impactful by bridging gaps in learning and communication worldwide.
+    </p>
 
-<div className="demopage bg-amber-50">page 4</div>
+  
+  </div>
+</div>
+
 
 
 
@@ -586,9 +607,9 @@ function MyBook() {
   {/* Profile Image */}
   <div className="w-36 h-36 rounded-full overflow-hidden border-4 border-indigo-500 shadow-lg mb-4 ml-[87px] ">
     <img 
-      src="/images/hussnain.jpg" 
+      src="./images/hussnain.png" 
       alt="Team Member" 
-      className="w-full h-full object-cover"
+      className="w-full h-full object-cover bg-gray-300"
     />
   </div>
 

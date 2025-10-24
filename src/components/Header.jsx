@@ -5,7 +5,7 @@ import { Link, useLocation } from "react-router-dom";
 import ThemeToggle from "./ThemeToggle";
 import emailjs from "@emailjs/browser";
 import { emailjsConfig } from "../config/emailjs.js";
-import ThemeImage from "./ThemeImage";
+import ThemeImage  from "./ThemeImage.jsx";
 
 const Header = () => {
     const location = useLocation();
@@ -17,6 +17,8 @@ const Header = () => {
     const toogleMenu = () => {
         setIsOpen(!isOpen);
     };
+
+    // Visitor counter removed
 
     // State to track if the contact form is open
     const [contactFormOpen, setContactFormOpen] = useState(false);
@@ -91,7 +93,7 @@ const Header = () => {
     };
 
   return (
-    <header className="absolute w-full z-50 transition-all duration-300 theme-transition">
+    <header className="absolute w-full z-50 transition-all bg-inherit  duration-300 theme-transition">
       <div className="container mx-auto px-4 sm:px-6 lg:px-8 flex items-center justify-between h-16 md:h-20">
         {/* Logo Name */}
         <motion.div
@@ -110,18 +112,18 @@ const Header = () => {
             <div className="h-10 w-10 rounded-xl bg-gradient-to-r  flex items-center justify-center text-purple-600 font-bold text-xl mr-3 ">
               <ThemeImage />
             </div>
-        <span className="jump-glitch text-[25px] font-bold bg-gradient-to-r from-purple-700 via-blue-500 to-pink-600 dark:from-gray-300 dark:to-gray-500 bg-clip-text text-transparent">
+        <span className="jump-glitch text-[25px] mr-[170px] font-bold bg-gradient-to-r from-purple-700 via-blue-500 to-pink-600 dark:from-gray-300 dark:to-gray-500 bg-clip-text text-transparent">
   Eyercall
 </span>
           </Link>
         </motion.div>
 
         {/* Desktop Navigation */}
-       <nav className=" ml-[400px] lg:flex hidden space-x-8">
+       <nav className="ml-[400px] lg:flex hidden space-x-8">
   {[
     { name: "Home", path: "/" },
     { name: "About", path: "/about" },
-    // { name: "Experience", path: "/experience" },
+    { name: "Experience", path: "/experience" },
     { name: "Contact", path: "/contact" }
   ].map((item, index) => (
       <motion.div
@@ -138,12 +140,12 @@ const Header = () => {
       >
         <Link
           to={item.path}
-          className={`relative font-bold text-violet-400 dark:text-gray-300 hover:text-gray-700  transition-colors duration-300 group cursor-none ${
+          className={`relative text-violet-400 dark:text-gray-300 hover:text-gray-700 font-medium transition-colors duration-300 group ${
             location.pathname === item.path ? 'text-violet-800' : ''
           }`}
         >
           {item.name}
-          <span className={`absolute -bottom-[6px] left-1/2 h-0.5 bg-gradient-to-r from-blue-300 via-purple-500 to-pink-400  dark:bg-gradient-to-r dark:from-gray-600 dark:to-gray-400 group-hover:w-[120%] transition-all duration-300 transform -translate-x-1/2 ${
+          <span className={`absolute -bottom-[6px] left-1/2 h-0.5 dark:bg-gradient-to-r dark:from-gray-600 dark:to-gray-400 group-hover:w-[120%] transition-all duration-300 transform -translate-x-1/2 ${
             location.pathname === item.path ? 'w-[120%]' : 'w-0'
           }`}></span>
         </Link>
@@ -154,15 +156,15 @@ const Header = () => {
 
        {/* Social icons - Desktop */}
 
-           <div className="md:flex items-center space-x-4 hidden mr-[10px] m-auto">
-               
+          <div className="md:flex items-center space-x-4 hidden mr-[10px] m-auto">
+              
                <motion.a
                className="text-violet-600 dark:text-gray-300 hover:text-gray-700 dark:hover:text-violet-400 transition-colors duration-300" 
                initial={{ opacity: 0, scale: 0.5 }} 
                 animate={{ opacity: 1, scale: 1 }}
                 transition={{delay: 1.3, duration: 0.8}}
                 
-                href="#">
+                href="https://github.com/eyercall" target="_blank">
                   <FiGithub className="w-6 h-6" />
                </motion.a>
 
@@ -172,7 +174,7 @@ const Header = () => {
                 animate={{ opacity: 1, scale: 1 }}
                 transition={{delay: 1.4, duration: 0.8}}
                 
-                href="#">
+                href="https://x.com/eyercall"  target="_blank">
                   <FiTwitter className="w-6 h-6" />
                </motion.a>
 
@@ -182,7 +184,7 @@ const Header = () => {
                 animate={{ opacity: 1, scale: 1 }}
                 transition={{delay: 1.5, duration: 0.8}}
                 
-                href="#">
+                 href="https://www.linkedin.com/in/eyer-call-18635a25b/" target="_blank">
                   <FiLinkedin className="w-6 h-6" />
                </motion.a>
 
@@ -248,11 +250,11 @@ const Header = () => {
         height: isOpen ? "auto" : 0,
      }}
      className="md:hidden overflow-hidden  bg-gray-100 dark:bg-gray-900 shadow-lg px-4 py-5 space-y-5 theme-transition">
-          <nav className="flex flex-col space-y-3 font-extrabold">
+          <nav className="flex flex-col space-y-3">
               {[
                 { name: "Home", path: "/" },
                 { name: "About", path: "/about" },
-                // { name: "Experience", path: "/experience" },
+                { name: "Experience", path: "/experience" },
                 { name: "Contact", path: "/contact" }
               ].map((item) => (
                 <Link
@@ -271,15 +273,16 @@ const Header = () => {
           <div className="pt-4 border-t border-gray-300 dark:border-gray-700">
 
             <div className="flex space-x-5 items-center">
-              <a href="#">
+              <a href="https://github.com/eyercall" target="_blank">
                 <FiGithub className="w-5 h-5 text-gray-800 dark:text-gray-300"/>
               </a>
 
-              <a href="#">
+              <a href="https://x.com/eyercall"  target="_blank">
                 <FiTwitter className="w-5 h-5 text-gray-800 dark:text-gray-300"/>
               </a>
 
-              <a href="#">
+              <a  href="https://www.linkedin.com/in/eyer-call-18635a25b/"
+      target="_blank">
                 <FiLinkedin className="w-5 h-5 text-gray-800 dark:text-gray-300"/>
               </a>
               

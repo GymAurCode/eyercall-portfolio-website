@@ -12,7 +12,7 @@ const teamMembers = [
     email: "ceo.eyercall@gmail.com",
     phone: "+92-300-1234567",
     image: "./images/ceo.png",
-    socials: { linkedin: "#", instagram: "#", github: "#" },
+    socials: { linkedin: "https://www.linkedin.com/in/eyer-call-18635a25b/", instagram: "https://www.instagram.com/eyercall/", github: "https://github.com/eyercall" },
     description: "Leading Eyercall with vision and strategic direction"
   },
   {
@@ -21,7 +21,7 @@ const teamMembers = [
     email: "Hussnain@gmail.com",
     phone: "+92-300-7654321",
     image: "./images/hussnain.png",
-    socials: { linkedin: "#", instagram: "#", github: "#" },
+    socials: { linkedin: "https://www.linkedin.com/in/eyer-call-18635a25b/", instagram: "https://www.instagram.com/eyercall/", github: "https://github.com/eyercall" },
     description: "Ensuring security and reliability of our platform"
   }
 ];

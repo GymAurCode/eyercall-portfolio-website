@@ -12,11 +12,22 @@ function CeoCard() {
           data-aos="fade-right"
           data-aos-delay="100"
         >
-          <img
-            src="/images/ceo.png"
-            alt="CEO"
-            className="w-44 h-44 md:w-52 md:h-52 rounded-full border-4 border-gray-400 dark:border-purple-400 shadow-lg mb-6 object-cover bg-gray-300 dark:bg-purple-500"
-          />
+       <div className="relative w-44 h-44 md:w-52 md:h-52 mb-8">
+  {/* Outer Glow Border */}
+  <div className="glow-border"></div>
+  
+  {/* Inner Glow Border */}
+  <div className="glow-border-inner"></div>
+  {/* CEO Image */}
+  <img
+    src="/images/ceo.png"
+    alt="CEO Muhammad Asad"
+    className="relative w-full h-full rounded-full border-4  border-transparent bg-gray-200 shadow-xl object-cover bg-tran dark:bg-purple-700 glow-effect z-10"
+    data-testid="img-ceo"
+  />
+</div>
+
+
           <h2 className="text-3xl font-bold mb-2">Muhammad Asad</h2>
           <p className=" text-purple-700 dark:text-purple-300 mb-6">CEO, Eyercall</p>
           
