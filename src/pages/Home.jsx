@@ -14,9 +14,9 @@ export default function Home() {
         <HeroSection />
       </AnimatePresence>
           <section className="w-full h-screen flex justify-center items-center flex-col  bg-purple-600  dark:from-black dark:via-purple-900 dark:to-black text-black dark:text-white py-20 px-4 text-center">
-      <h1 className="text-8xl font-bold  mb-4">Welcome to Eyercall</h1>
+      <h1 className="text-8xl font-bold  mb-4">One Platform. Endless Connections</h1>
       <p className="text-lg mb-6">
-        Your one-stop solution for inventory and business management. Explore the future with us!
+        Discover, learn, and grow with innovators from every corner of the world.
       </p>
       <button className="px-6 py-3 bg-white text-blue-600 font-semibold rounded-lg hover:bg-gray-100 transition">
         Get Started
@@ -24,9 +24,9 @@ export default function Home() {
     </section>
       <Cards />
        <section className="w-full h-screen flex justify-center items-center flex-col  bg-purple-600  dark:from-black dark:via-purple-900 dark:to-black text-black dark:text-white py-20 px-4 text-center">
-      <h1 className="text-8xl font-bold  mb-4">Welcome to Eyercall</h1>
+      <h1 className="text-8xl font-bold  mb-4">Attend Effortlessly</h1>
       <p className="text-lg mb-6">
-        Your one-stop solution for inventory and business management. Explore the future with us!
+       Join from anywhere, anytime — all you need is a browser.
       </p>
       <button className="px-6 py-3 bg-white text-blue-600 font-semibold rounded-lg hover:bg-gray-100 transition">
         Get Started

@@ -117,7 +117,7 @@ const Header = () => {
         </motion.div>
 
         {/* Desktop Navigation */}
-       <nav className="ml-[30 0px] lg:flex hidden space-x-8">
+       <nav className="min-ml-[350px] m-auto lg:flex hidden space-x-8">
   {[
     { name: "Home", path: "/" },
     { name: "About", path: "/about" },
