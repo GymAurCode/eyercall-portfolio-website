@@ -7,7 +7,9 @@ import AOS from "aos";          // AOS import
 import "aos/dist/aos.css";      // AOS CSS import
 
 function Main() {
+  console.log("Main component rendering");
   useEffect(() => {
+    console.log("Main useEffect running - initializing AOS");
     AOS.init({
       duration: 800, // har animation ki speed (ms)
     });

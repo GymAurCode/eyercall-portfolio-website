@@ -4,9 +4,11 @@ import gsap from "gsap";
 import LottieAnimation from "./Gif";
 
 function HeroSection() {
+  console.log("HeroSection component rendering");
   const imgRef = useRef(null);
 
   useEffect(() => {
+    console.log("HeroSection useEffect running");
     gsap.to(imgRef.current, {
       rotationY: 360,         // Y-axis par rotate hoga
       repeat: -1,             // infinite loop

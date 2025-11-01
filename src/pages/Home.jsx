@@ -8,7 +8,7 @@ import Bigcard from "../components/Bigcard";
 export default function Home() {
   return (
     <>
-    
+
       {/* AnimatePresence ensures smoother exit animations */}
       <AnimatePresence mode="wait">
         <HeroSection />

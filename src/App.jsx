@@ -10,6 +10,7 @@ import ScrollToTop from "./components/ScrollToTop";
 import { ThemeProvider } from "./context/ThemeContext";
 
 export default function App() {
+  console.log("App component rendering");
   const [showIntro, setShowIntro] = useState(true);
 
   const handleIntroComplete = () => {

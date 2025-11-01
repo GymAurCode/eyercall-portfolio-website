@@ -5,7 +5,6 @@ import { Link, useLocation } from "react-router-dom";
 import ThemeToggle from "./ThemeToggle";
 import emailjs from "@emailjs/browser";
 import { emailjsConfig } from "../config/emailjs.js";
-import ThemeImage  from "./ThemeImage.jsx";
 
 const Header = () => {
     const location = useLocation();
@@ -110,7 +109,6 @@ const Header = () => {
         >
           <Link to="/" className="flex items-center">
             <div className="h-10 w-10 rounded-xl bg-gradient-to-r  flex items-center justify-center text-purple-600 font-bold text-xl mr-3 ">
-              <ThemeImage />
             </div>
         <span className="jump-glitch text-[25px] mr-[170px] font-bold bg-gradient-to-r from-purple-700 via-blue-500 to-pink-600 dark:from-gray-300 dark:to-gray-500 bg-clip-text text-transparent">
   Eyercall
@@ -119,11 +117,10 @@ const Header = () => {
         </motion.div>
 
         {/* Desktop Navigation */}
-       <nav className="ml-[400px] lg:flex hidden space-x-8">
+       <nav className="ml-[30 0px] lg:flex hidden space-x-8">
   {[
     { name: "Home", path: "/" },
     { name: "About", path: "/about" },
-    { name: "Experience", path: "/experience" },
     { name: "Contact", path: "/contact" }
   ].map((item, index) => (
       <motion.div
