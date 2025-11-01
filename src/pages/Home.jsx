@@ -6,6 +6,7 @@ import CustomCursor from "../components/CustomCursor";
 import Bigcard from "../components/Bigcard";
 
 export default function Home() {
+  console.log("Home component rendering");
   return (
     <>
 
